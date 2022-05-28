@@ -1,0 +1,38 @@
+﻿@Html.BeginForm()
+{
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#goldprice').on('mouseleave', function () {
+            if ($(this).val() < 0) {
+                alert("Price Can't be negative");
+            }
+        })
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        var now = new Date();
+        var today = now.getDate() + '/' + (now.getMonth() + 1) + '/' + now.getFullYear();
+        $('#date').append(today);
+    });
+</script>
+
+<br />
+<br />
+
+<form>
+    <p id="date">Date :</p>
+    <input type="text" name="GoldPrice" id="goldprice" required />
+
+    <br />
+    <br />
+
+    <input type="submit" value="Submit" name="Submit" class="btn btn-default" ) />
+    <input type="submit" value="Cancel" name="Cancel" class="btn btn-default" ) />
+
+
+</form>
+}

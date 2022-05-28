@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CodingChallenge5BussinessLayer\CodingChallenge5BussinessLayer.csproj" />
+    <ProjectReference Include="..\CodingChallenge5Entities\CodingChallenge5Entities.csproj" />
+  </ItemGroup>
+
+</Project>

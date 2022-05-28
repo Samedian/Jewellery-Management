@@ -1,0 +1,40 @@
+﻿@Html.BeginForm()
+{
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#quantity').on('mouseleave', function () {
+            if ($(this).val < 0) {
+                alert("Quantity can't be negative")
+            } else {
+                var amount = $("#quantity").val() *@ViewBag.GoldPrice;
+                $('#amount').val(amount);
+            }
+        })
+    });
+</script>
+<br />
+<br />
+<label for="Item">Choose a Item    </label>
+
+<label for="Quantity">Quantity     </label>
+
+<label for="Amount">Amount         </label>
+
+<br />
+<select name="ItemName" id="ItemName">
+    @foreach (var item in ViewBag.Data)
+    {
+        <option value="@item">@item</option>
+    }
+</select>
+
+<input type="text" name="Quantity" id="quantity" />
+<input type="text" name="Amount" id="amount" />
+
+<br />
+<br />
+<input type="submit" value="Submit" name="Submit" class="btn btn-default" ) />
+<input type="submit" value="Cancel" name="Cancel" class="btn btn-default" ) />
+}

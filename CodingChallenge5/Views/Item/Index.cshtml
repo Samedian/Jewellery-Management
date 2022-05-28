@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@Html.BeginForm()
+{
+    <style>
+        body
+        {
+            text-align:center;
+            background-color:cornflowerblue;
+        }
+    </style>
+
+    <br />
+    <br />
+    @Html.ActionLink("Stock", "GetItem")
+    <br />
+    <br />
+    @Html.ActionLink("Gold Price","SetGoldPrice")
+
+    <br />
+    <br />
+    @Html.ActionLink("Purchase","AddItem")
+
+    <br />
+    <br />
+    @Html.ActionLink("Sell", "SellItem")
+    
+}

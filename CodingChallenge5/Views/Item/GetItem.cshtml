@@ -1,0 +1,58 @@
+﻿@Html.BeginForm()
+{
+<style>
+    body {
+        text-align: center;
+        background-color: aquamarine;
+    }
+
+    table, th, td {
+        text-align: center;
+        border: 1px solid black;
+    }
+</style>
+
+<script>
+        function goToHome () {
+    window.location.href = "@Url.Action("Index", "Item")"
+    };
+</script>
+
+
+<script>
+    $(document).ready(function () {
+
+        if ($('#tablequan').val > 15) {
+            $('#tablerow').css("background-color", "Red");
+        }
+    });
+
+</script>
+<table style="text-align:center">
+    <tr>
+        <th>
+            Item Name
+        </th>
+        <th>
+            Quantity
+        </th>
+    </tr>
+
+    @foreach (var item in ViewBag.Data)
+    {
+        <tr id="tablerow">
+            <td>
+                @item.ItemName
+            </td>
+            <td id="tablequan">
+                @item.ItemQuantity
+            </td>
+        </tr>
+    }
+
+</table>
+
+<br />
+<br />
+<input type="button" class="btn btn-lg btn-success" onclick="goToHome()" value="Home" />
+}
